@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  async asyncData
+  async asyncData() {},
 }
 </script>
