@@ -1,9 +1,10 @@
 <template>
   <div>
     <h1 class="text-7xl font-black text-center">New on the blog</h1>
-    <div v-for="post in posts" :key="post.title">
-      <h2>{{ post.title }}</h2>
-    </div>
+    <ul class="grid grid-cols-3 gap-8 mt-8">
+      <PostPreview v-for="post in posts" :key="post.slug" :post="post">
+      </PostPreview>
+    </ul>
   </div>
 </template>
 
