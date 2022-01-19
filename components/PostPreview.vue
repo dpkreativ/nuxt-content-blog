@@ -1,6 +1,6 @@
 <template>
   <li class="transition-all duration-500 ease-in-out">
-    <a href="/blog/${post.slug}">
+    <a :href="`/blog/${post.slug}`">
       <nuxt-img
         class="rounded-lg"
         :src="post.image"
@@ -8,7 +8,7 @@
         width="400"
         height="300"
       />
-      <ul v-if="post.tags" class="flex space-x-3 mdt-2">
+      <ul v-if="post.tags" class="flex space-x-3 mt-2">
         <li class="text-gray-400 font-bold" v-for="tag in post.tags" :key="tag">
           {{ tag }}
         </li>
